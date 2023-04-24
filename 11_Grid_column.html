@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid columns</title>
+    <style>
+        .grid {
+            display: grid;
+            /* grid-template-columns: n hedn column bs tuhain baganuud her urgun bh ystoig zaaj ugdg*/
+            grid-template-columns: 200px auto 200px;
+            /* grid-template-columns: 200px auto 200px; ene auto n automataar tohirdg bolgj bn. goliin column n sul zaig duurgej arai urgun bolj bn. delgets buyu viewport yaj ch tomorch jijgerhd sunaj bn. Busd 2 200px tei item uurchlgdhgui*/
+
+            /* 3 item 3ula auto bl 3 column yg tentsuu hemjeetei flexible hudulj bn */
+            grid-template-columns: auto auto auto;
+            /* if bugd ijil hemjeetei item bs olon bval ter bolgnd auto gj bichh hetsuu tul 4,- hedn item daraalluulna tgd auto*/
+            grid-template-columns: repeat(4, auto);
+
+            /* gridiin width iig px bs % r uurchilj bolno. But gridd zoriulgdsn uur hemjh negej fragment gj bdg. 5 hesg huvaagdsm gesn utgatai dood taliinh*/
+            grid-template-columns: 1fr 2fr 2fr;
+            /* margin shg */
+            gap: 1rem;
+        }
+        .item {
+            padding: 3rem;
+            border: #888 1px solid;
+            background-color: #dfdbdb;
+            font-size: 1.3rem;
+            /* fontiig bold bolgoj bn */
+            font-weight: bold;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 1.5rem;
+        }
+
+    </style>
+</head>
+<body>
+<div class="grid">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    <div class="item">item 5</div>
+    <div class="item">item 6</div>
+</div>
+<main>
+    <section>
+        <h3>Welcome</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum harum vitae, dolorum excepturi eaque quisquam beatae, minima magni doloribus voluptas reprehenderit quod a totam nobis vel perspiciatis commodi dolor similique!</p>
+    </section>
+    <aside>
+        <h3>Hello</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, dolorem?</p>
+    </aside>
+</main>
+    
+</body>
+</html>
+<!-- Gridiig flex iin adilaar .container bdlaar uusgedg. Display propertyd n grid gedg utga ugnu so dotrh elementuud n grid itemuud bolj huvirna-->

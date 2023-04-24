@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid columns</title>
+    <style>
+        /* iimerhuu butetstei gridiig implicit grip gedg */
+        .grid {
+            display: grid;
+            /* column and row 2g zerg style hj bolno. 3columnd 1r mur 1fr 2rh 2fr 3r mur 3fr 4r mur 4fr 5 bln 6 hain 3fr */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+
+            /* if 5 boln 6r itemd style hj uguugui bl width bln heightee automataar avdg. ghde tuhain griddee taarahuits hemjeenii hangalttai hemjeeg avch uusgegddg uchirtai */
+            grid-template-rows: 1fr 2fr 3fr 4fr;
+
+            /* yg uuriin garaar tohiruulj ugsn elementees busd buyu 5dh 6dh elementuud automataar 3fr bolj bn */
+            grid-auto-rows: 3fr;
+        }
+        .item {
+            padding: 3rem;
+            border: #888 1px solid;
+            background-color: #dfdbdb;
+            font-size: 1.3rem;
+            /* fontiig bold bolgoj bn */
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="grid">
+    <div class="item">item 1</div>
+    <div class="item">item 2</div>
+    <div class="item">item 3</div>
+    <div class="item">item 4</div>
+    <div class="item">item 5</div>
+    <div class="item">item 6</div>
+    <div class="item">item 7</div>
+    <div class="item">item 8</div>
+    <div class="item">item 9</div>
+    <div class="item">item 10</div>
+    <div class="item">item 11</div>
+    <div class="item">item 12</div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after</title>
+   <style>
+    /* content: '*' - Name* bolno bs only css r damjin ene od tavigdh ystoi. mun class dr n "is-required" bh ystoi */
+    .is-required::after {
+        content: '*';
+        color: pink;
+        padding-left: 0.3rem;
+    }
+    /* .is-required::before { gevl * maani urd tald n shiljine
+    } */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #444;
+        color: pink;
+        margin: 0;
+/* margin: 0; reset hj ugh ystoi */
+    }
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;  
+    
+}
+/* :before ashiglan bg dr bgaa zurgaa budgeruulh hergtei. Content: ' '; hoosn orhih hergtei*/
+header:before {
+    content: '';
+    background: url(./img/photo-1462275646964-a0e3386b89fa.avif) no-repeat center center/cover;
+    opacity: 0.4;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* top: 0; left: 0; gj hsneer hamgiin zuun deed biúlangaas width bln height n tootsgdoj eheldg uchraas */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* z-index: -1; zurgaa neg tsaash n tulhej holduulj bn gesn ug */
+
+}
+header > h1 {
+    font-size: 4rem;
+    margin: 1rem;
+}
+   </style>
+</head>
+<body>
+    <label class="is-required" for="name">Name</label>
+    <input type="text">
+
+    <header>
+        <h1>Hello world</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, velit.</p>
+    </header>
+    <section>
+        <h3>Lorem, ipsum dolor.</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit iste in illum. Eum reiciendis totam consequuntur tempora, suscipit distinctio nemo quis repellendus architecto reprehenderit officia praesentium, similique atque ex sequi!</p>
+    </section>
+</body>
+</html>
+<!-- before after iig zaavalchgui buglh ystoi hesg bdg. For example neree oruulna uu etc, zaaval bugluh hesgt * tavijhsn bdg-->
+<!-- zurgniii overlay hhd ashiglagddg -->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS tarnsitions</title>
+    <style>
+body {
+    background-color: rgb(124, 155, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box {
+    background-color: rgb(224, 229, 230);
+    width: 100px;
+    height: 100px;
+    /* ymr negen propertyg songood position hj blno or bugdn dr n hj bolno   */
+    /* hervee dood 2 bhgui bol cursor ochhd shuud violet bolno */
+    transition-property: background;
+    transition-duration: 2s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in-out;
+    transition: background, border-radius 2s ease-in-out;
+    /*  transition: background, border-radius 2s ease-in-out; bg bolon border-rad 2iin ornd all gd bichvel .box:hover dotrh bugd ajillana*/
+
+}
+.box:hover {
+    background-color: blueviolet;
+    border-radius: 50%;
+    width: 300px ;
+    height: 300px;
+}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>
+<!-- keyframe shg animation hh bs neg arga. gol ylgaa n ymar neg event dr undeslej ajilladg. mouse aa neg tovchluur dr vaachhd ajilladg ch ymu etc - use it a lot further-->
+
+
+ <!-- transition hh bolomjtoi properties 
+
+background-color 
+background-position
+border-color
+border-width
+border-spacing
+bottom
+color
+font-size
+font-weight
+height
+left
+letter-spacing - useg hoorndiin zai
+line-height
+margin
+max-width
+max-height
+opacity
+outline-color
+min-height
+min-width
+outline-offset
+outline-width
+padding
+right
+text-indent - tab darhd gardg dogol mur
+text-shadow - textiin suuder
+top
+vertical-align - bosoo tenhlgiin daguu zergtsuullt
+visibility - hargdh bdal
+width
+word-spacing
+z-index-->
+

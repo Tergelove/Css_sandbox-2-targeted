@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template areas</title>
+    <style>
+.container {
+    display: grid;
+    grid-template-areas: 
+    /* My website iig neg murund dangaar n bn gdgiig bichj ugnu- door 3 box bgaa so 3 baganad bairluulh uchrs bagnaniihaa hamgiin olon toogoor bich ugnu. 3box 3 bagana bgaa blhr 3udaa header gj bich ugnu */
+    'header header header'
+    /* contentoo 2 column ezelj orshy- 2 times content gj  bichne */
+    'content content sidebar'
+    'box-1 box-2 box-2'
+    /* box2 iluu 3/2 zaig ezleed box3 dood tald delgets duuren urtaaraa ezlne */
+    'box-3 box-3 box-3'
+    'footer footer footer';
+    /* ingej hhed 3 columnd huvaagdaad grid helbrt orj bn. BUt bidnii hussneer hargdhgui bn so element bolgniig grid-template-areas tai holbj ugnu. */
+    gap: 1rem;
+}
+.header {
+    grid-area: header;
+    text-align: center;
+    
+}
+.content {
+    grid-area: content;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.box-1 {grid-area: box-1;}
+.box-2 {grid-area: box-2;}
+.box-3 {grid-area: box-3;}
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+.header, 
+.content, 
+.sidebar,
+.box-1,
+.box-2, 
+.box-3,
+.footer {
+    border: 1px #999 solid;
+    padding: 0.5rem;
+}
+@media(max-width: 500px) {
+    .container { 
+    grid-template-areas: 
+    'header'
+    'content' 
+     'sidebar'
+    'box-1'
+    ' box-2'
+    'box-3'
+    'footer';
+}}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header"> 
+            <h1>My Website</h1>
+        </header>
+        <section class="content">
+        <h3>Welcome</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut rem veniam inventore, adipisci perspiciatis recusandae ipsa aspernatur eius ullam expedita animi dolores? Doloribus culpa mollitia iure non, nulla ducimus fugiat laborum eaque dicta reprehenderit cum quam. Odio recusandae adipisci dolores.</p>
+    </section>
+    <aside class="sidebar">
+        <h3>Contact us</h3>
+        <ul>
+            <li>Vienna</li>
+            <li>Berlin</li>
+            <li>Paris</li>
+            <li>Geneva</li>
+        </ul>
+    </aside>
+    <div class="box-1">
+        <h3>Title</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas et natus reiciendis ipsa praesentium, dicta quasi enim corrupti at a sed iure, soluta est labore quos exercitationem architecto veritatis facilis!</p>
+    </div>
+    <div class="box-2">
+        <h3>Title</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas et natus reiciendis ipsa praesentium, dicta quasi enim corrupti at a sed iure, soluta est labore quos exercitationem architecto veritatis facilis!</p>
+    </div>
+    <div class="box-3">
+        <h3>Title</h3>
+       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas et natus reiciendis ipsa praesentium, dicta quasi enim corrupti at a sed iure, soluta est labore quos exercitationem architecto veritatis facilis!</p>
+    </div>
+    <footer class="footer">
+        <p>All Rights Reserved. 2009</p>
+    </footer>
+    </div>
+    
+</body>
+</html>
+<!-- grid template areas - property n web huudsn dr bga gridiig map buyu gazriin zurg maygtai zuiliig hj ugdg zuil ym.  -->

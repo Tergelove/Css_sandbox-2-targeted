@@ -1,0 +1,155 @@
+.menu-wrap {
+/* position: fixed bichsneer browseriin tsonh tomorsn ch hemjee n hevndee uldeh ystoi uchraas  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* buh el bln huudsnii deer hargduulahiin tuld z-index use */
+    z-index: 1;
+}
+/* checkbox oo hargdhgui bolgosn  */
+.menu-wrap .toggler {
+    /* parentaasaa hamaaralgui */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* buh zuiliin deer place */
+    z-index: 2;
+    /* cursor: pointer; hj ugch bj door hamburger before after gd menu x bolj hudulj bn */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    /* opacity: 0 gesneer checkbox hargdhgui blno ghdee bairndaa bgaa */
+    opacity: 0;
+}
+.menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* z-index: 1; checkboxiin door brlah ystoi */
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* hamburger menu lines */
+.menu-wrap .hamburger > div {
+    /* parentaasaa hamaarltai uchir relative bn */
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+/* hamburger upper and bottom line  */
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+    /* befor afteriig hamtd n hj ugsn uchir davhtsaad hargdhgui bgaa uchir tusd n dahiad door after dotr top hj ugnu */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    /* background-color: inherit; umnuh div eesee udamshij huulj avch bn */
+    background-color: inherit;
+}
+/* place line down */
+.menu-wrap .hamburger > div:after {
+    top: 10px;
+}
+/* toggler animation */
+/* :checked gesn state hergtei. hamburgeriin dragiin div iig transform hne */
+.menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+/* 2taliin line iig 90deg top: 0; boljiij buheldee tovchluur darhd x helbertei bolj bn */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+/* Menu dargdsn uyd cursor ochhd uyd erguuleh */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(360deg);
+}
+--------------------
+/* Overlay menu */
+.menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* width:100%, height:100% gdg n parent elementiinhee 100%d gesn sanaa */
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; scroll bar hidden blno */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-wrap .menu > div {
+    background-color: var(--overlay-color);
+    /*  width: 300vw; height: 300vw; landscape delgetsn dr harhd tom bg bh ystoi uchras 300vw gj bichsn mun 2ula adilhn vw bn */
+    border-radius: 50%;
+    width: 300vw;
+    height: 300vw;
+    /*  display: flex; align-items: center; justify-content: center; - hsneer text dahin garj irj hargdna. */
+    display: flex;
+    /* flex: none; - deed tald n display: flex gd avsn uchir flex: none bolgoj bj border-radius zuv ajillana */
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    /* transform: scale(0); - bg maani butsaad hargdhgui bolno */
+    transform: scale(0);
+    /*  transition: all 0.4s ease; dotr n bgaa buh zuiliig transition hj ugch bn */
+    transition: all 0.4s ease;
+}
+.menu-wrap .menu > div > div {
+    /* text maani zuun talruugee align bgaa uchraas center bolgno */
+    text-align: center;
+    /* max-width: 90vw; max-height: 90vw; 2dh div uchraas 1dhse davj garch bolhgui uchir*/
+    max-width: 90vw;
+    max-height: 100vw;
+    opacity: 0;
+    /* transition: opacity 0.4s ease; - opacity dr hj ugch bgaa uchir n ehleed overlay bg garj irsnii dra menu aajmaar garch irj bgaa uchr. 2 div tusdaa hiigdej bgaagiin reason */
+    transition: opacity 0.4s ease;
+}
+.menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    /*  transition: color 0.4s ease; - cursor ochhd goy uusalttai ungu soligdno */
+    transition: color 0.4s ease;
+}
+.menu-wrap .menu > div > div > ul > li > a:hover {
+    color: var(--secondary-color);
+} 
+---------------------
+/* .menu-wrap .toggler:checked ~ .menu - tsesn dr darsn uyd hargdj daraagui uyd hidden bolgno. .menu-wrap .menu dotr visibility: hidden bolgosn bgaa uchraas uuniigee visible bolgj gargaj irne. ~ menu gsn n toggler s barg 3 divnii zaitai bgaa uchraas busd > + etc bichj bolhgui */
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+    /* however menu maani garch irj hargdhgui bn ene n .menu-wrap .menu > div dotr transform: scale(0); bolsn bgaa uchrs */
+}
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+/* textee gargaj ireh ystoi */
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}

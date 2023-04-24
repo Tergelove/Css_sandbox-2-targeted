@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform properties</title>
+    <style>
+body {
+    background-color: rgb(208, 124, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.box {
+    background-color: rgb(224, 229, 230);
+    width: 300px;
+    height: 300px;
+    /* 25gradusaar hajuu tiish ergene 
+    transform: rotate(25deg); */
+    /* transform: skew(25deg); - diagnali dalii bolno*/
+    /* transform: scale(2); - box 2 dahin tomrono */
+    /* transition transform 2iig holbvol */
+    transition: all 1s ease-in-out;
+
+}
+.box:hover {
+   /* transform: rotate(180deg);
+   transform: skew(25deg);
+   transform: scale(2); */
+
+   /* tblr ashiglahguigeer zuuh bolomjtoi 
+   transform: translateY(100px) - dooshoo 100px hudlunu, (-100px)gevl deeshee    transform: translateX(100px) - zuun tiish, (-100px)gevl baruun tiish*/
+transform: translateX(100px);
+transform: translateX(100px); 
+/* XY zerg hudulguhiig husvel hamtd n bichne. dood tal shg bichhd zuun deeshee 45% hudulj bn */
+transform: translate(-100px, -100px );
+}
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

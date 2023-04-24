@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth child</title>
+    <style>
+        li {
+            padding: 0.25rem;
+            margin: 0.25rem;
+            list-style: none;
+        }
+        /* first child */
+        li:first-child {
+            background-color: pink;
+        }
+        /* last child */
+        li:last-child {
+            background-color: pink;
+        }
+        /* if zaavl ehnii or suuliin child bh albagui, dund havitsaa tegsh tootoi or sondgoi tootoi or 3r tugssn gh metchilen el iig select hh hergtei bolvl */
+        /* position 3 - 3r elementiig select hj style hy - () dotr bol too tomyo keyword etc yu ch bj blno */
+        li:nth-child(3) {
+            background-color: lightcoral !important; 
+        }
+        /* if 3d huvaagddg toonuudiig select hy gevl */
+        li:nth-child(3n+0) {
+            background-color: lightblue;
+        }
+        /* every 3rd el after 7 - 7s hoishh 3dh 3dh el uud yellow bolj bn */
+        li:nth-child(3n+7) {
+            background-color: yellow;
+        }
+        /* every odd - tegsh bolon sondgoi itemuudiig select hh */
+        li:nth-child(odd) {
+            background-color: lightgreen;
+        }
+        /* every even - buh tegsh itemuudiig select */
+        li:nth-child(even) {
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>item 8</li>
+        <li>item 9</li>
+        <li>item 10</li>
+        <li>item 11</li>
+        <li>item 12</li>
+        <li>item 13</li>
+        <li>item 14</li>
+        <li>item 15</li>
+        <li>item 16</li>
+        <li>item 17</li>
+        <li>item 18</li>
+        <li>item 19</li>
+        <li>item 20</li>
+    </ul>
+</body>
+</html>

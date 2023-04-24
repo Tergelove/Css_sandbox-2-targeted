@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe animation</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        .box {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            /* position: relative; hj ugsnuur tblr uurchlh bolomjtoi blno mun bairshil uurchlh bolmjtoi */
+            position: relative;
+            animation-name: animate1;
+            /* urgejleh hugatsaa */
+            animation-duration: 3s; 
+            /* heden udaa yvuulah - infinite; gevl hyzgaargui zogsoltgui,  */
+            animation-iteration-count: 1;
+            /* if 200px s 600px hurtel yvaad barihiig husvel */
+            animation-fill-mode: forwards;
+            /* animation hudulj ehleheesee umnu 3s huleene 
+            animation-delay: 3s; */
+
+            /* alternate-reverse; - 600px s 200px ruu butsaj hudluh bl  */
+            animation-direction: alternate;
+
+            /* set fastness and slowness - ease-in, ease-out, ease-in-out */
+            animation-timing-function: ease-in;
+            animation: animate1 5s forwards 1s ease-in-out;
+        }
+        /* animationoo ajilluulahiin tuld @keyframes ashiglna */
+        @keyframes animate1 {
+            /* from {
+                width: 200px;
+            } bichhguu bsn ch bln bcs deer bichsn uchraas */
+            from {
+                /* deerees doosh position uurchögdj bn. door top: 300px; bolgsn bgaa */
+                top: 0;
+            }
+        to {
+            width: 600px;
+            /* white s pink ru ungu soligdno */
+            background-color: pink;
+            top: 300px;
+        }
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+    
+</body>
+</html>
+<!-- Animation hh bolomjtoi zarim neg propertyg ashiglaj hdg. tuhain el iin ungu, bairshil, opacity, urgun, animation r zohitsuulj hh arga bdg -->

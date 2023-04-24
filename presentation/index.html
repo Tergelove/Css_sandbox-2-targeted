@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.presentation.css">
+    <script src="https://kit.fontawesome.com/6c4e4c3b5f.js" crossorigin="anonymous"></script>
+    <title>Presentation</title>
+    <style>
+       
+
+    </style>
+</head>
+<body>
+    <section id="page-1" class="page">
+        <h1 class="item-1 l-heading ">Welcome to our presentation</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, quo exercitationem dicta voluptas harum doloribus aliquam repellendus rem officia, aut nostrum beatae. Officia numquam facere quas rem dicta suscipit cumque doloremque non labore. Illum omnis facilis odio ut, excepturi tenetur eum! Rerum labore ea iste nemo iure earum tempora unde!</p>
+        <div>
+        <a href="#page-2" class="btn">Next page <i class="fas fa-arrow-circle-down"></i></i></a>
+        </div>
+</section>
+
+<section id="page-2" class="page">
+        <h1 class="l-heading">Our presentation 2</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam rerum itaque vel illum necessitatibus veritatis repudiandae, iusto impedit veniam molestias magni, provident quasi, autem recusandae ut. Numquam tempore accusamus magni architecto nobis nihil, dignissimos, aperiam doloremque voluptatem fugiat possimus error magnam sint molestiae maiores quo delectus cupiditate nemo ab hic tenetur ullam laborum fuga! Delectus!</p>
+        <div><a href="#page-1" class="btn btn-dark">Previous page <i class="fas fa-arrow-circle-left"></i></a>
+        <a href="#page-3" class="btn">Next page <i class="fas fa-arrow-circle-right"></i></a></div>
+</section>
+<section id="page-3" class="page">
+        <h1 class="l-heading">Our presentation 3</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam rerum itaque vel illum necessitatibus veritatis repudiandae, iusto impedit veniam molestias magni, provident quasi, autem recusandae ut. Numquam tempore accusamus magni architecto nobis nihil, dignissimos, aperiam doloremque voluptatem fugiat possimus error magnam sint molestiae maiores quo delectus cupiditate nemo ab hic tenetur ullam laborum fuga! Delectus!</p>
+        <div><a href="#page-2" class="btn btn-dark">Previous page <i class="fas fa-arrow-circle-left"></i></a>
+        <a href="#page-4" class="btn">Next page <i class="fas fa-arrow-circle-right"></i></a>
+    </div>
+</section>
+<section id="page-4" class="page">
+        <h1 class="l-heading">Our presentation 4</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam rerum itaque vel illum necessitatibus veritatis repudiandae, iusto impedit veniam molestias magni, provident quasi, autem recusandae ut. Numquam tempore accusamus magni architecto nobis nihil, dignissimos, aperiam doloremque voluptatem fugiat possimus error magnam sint molestiae maiores quo delectus cupiditate nemo ab hic tenetur ullam laborum fuga! Delectus!</p>
+        <div><a href="#page-3" class="btn btn-dark">Previous page <i class="fas fa-arrow-circle-left"></i></a>
+        <a href="#page-5" class="btn">Next page <i class="fas fa-arrow-circle-right"></i></a></div>
+</section>
+<section id="page-5" class="page">
+        <h1 class="l-heading">Our presentation 5</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam rerum itaque vel illum necessitatibus veritatis repudiandae, iusto impedit veniam molestias magni, provident quasi, autem recusandae ut. Numquam tempore accusamus magni architecto nobis nihil, dignissimos, aperiam doloremque voluptatem fugiat possimus error magnam sint molestiae maiores quo delectus cupiditate nemo ab hic tenetur ullam laborum fuga! Delectus!</p>
+        <div><a href="#page-4" class="btn">Previous page <i class="fas fa-arrow-circle-left"></i></a></div>
+</section>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+<script>
+    // Smooth scroll - javaScript code ashiglaj huudas hoornd shiljih hudulguund effect oruulj ugnu.
+    $('.btn').on('click', function(event) {
+        if (HashChangeEvent) {
+            event.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate (
+                {
+                    scrollTop: $(hash).offset().top
+                },
+                800
+            );
+        }
+    });
+</script>
+</body>
+</html>

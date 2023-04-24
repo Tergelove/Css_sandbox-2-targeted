@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid span</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        /* urt bdlaar bichlee */
+        .item:first-child {
+            /* grid-column-start: 2; gj bichvel 2egneenees ehleed bagana mur tootsogdoj ehlene */
+            grid-column-start: 1;
+
+            /* grid-column-end: 4;- gj bichtel hevteegeer ehnii 3mur duuren tom item bolsn but 4 gj bichej bhd why? itemiin top leftees ehleed deerees doosh 1r shugam gej tootsood aragsh 3 shugam yvna. totally 4 bolj bn */
+            grid-column-end: 4;
+            grid-row-start: 1;
+
+            /* grid-row-end: 3; - 3bagana 2 muriig buheld n ezelne. grid-row or column-end or start propertg herglej bgaa tohioldld shugamiig ilerhiilne. hamgiin deed taliin muriin shugam tgd 2dh 3dh */
+            grid-row-end: 3;
+
+
+            /* short bichegleliin arga */
+            /*  grid-column: 1 / span 3;- deer bl shugamaar tootsoj bsn bl end shuud baganaar tootsno */
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 2;
+        }
+
+
+        /* suido selectiig ashiglaj item 9g selectlne. 2r bagnaas hoishoo duustal n ezleheer zb */
+         .item:nth-child(9) {
+            grid-column: 2 / span 3;
+            grid-row: 4 / span 2; 
+            /* grid classtai div dotrh buh itemuudiig (markupaa) div dotr n uurchlhguigeer zuuh shaardlga gardg- grid-column, grid-row iig ashiglah bolmjtoi. */
+            /* grid-row: 2 / span 1; */
+        }
+        .item {
+            padding: 3rem;
+            border: #888 1px solid;
+            background-color: #d6d2d6;
+            font-size: 1.3rem;
+            /* fontiig bold bolgoj bn */
+            font-weight: bold;
+            text-align: center;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.2rem;
+
+        }
+        #showcase .container {
+            padding: 2rem;
+            background-color: #cf65a6;
+            border: 1px #888;
+            border-radius: 10px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin: 2rem 1rem;
+
+        }
+        main {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: 3fr 1fr;
+            margin: 1rem;
+           padding: 1rem;
+           border: 1px rgb(178, 7, 190) solid;
+           border-radius: 5px;
+        }
+        main .menu {
+            background-color: pink;
+            padding: 2rem;
+            border-radius: 5px;
+        }
+        main .main-menu {
+            background-color: rgb(228, 137, 167);
+            padding: 2rem;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+        <div class="item">item 9</div>
+        <div class="item">item 10</div>
+        <div class="item">item 11</div>
+        <div class="item">item 12</div>
+        <div class="item">item 13</div>
+        <div class="item">item 14</div>
+        <div class="item"></div>
+    </div>
+    <div id="showcase">
+        <div class="container">
+        <h1>Welcome to my world</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sed in aperiam quaerat, impedit, neque quod ratione vel facere eum consequatur beatae ipsa asperiores exercitationem.</p>
+    </div>
+</div>
+<main>
+    <aside class="main-menu">
+        <h2>Stay positive</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat quasi totam maxime! Explicabo, quod neque asperiores ut accusamus molestiae laboriosam quam totam necessitatibus reprehenderit! Tenetur blanditiis quidem distinctio magnam delectus id necessitatibus, laudantium quae earum deleniti eius consectetur ea atque consequatur a exercitationem! Temporibus, qui.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nulla nihil ipsam, excepturi neque laborum aut sit eos a numquam sint voluptatum facere quisquam blanditiis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos velit molestias, omnis quas magnam, quisquam commodi laborum laudantium, error architecto iste? Fugiat deleniti, non repellat impedit illum unde? Exercitationem ipsa deleniti nobis maiores enim aperiam eveniet odio architecto consequatur quidem!</p>
+    </aside>
+    <aside class="menu">
+        <h3>stay healthy and be happy</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt quidem veniam alias non magni inventore enim aspernatur, eum tempora aliquid doloremque adipisci accusamus ipsa, reprehenderit nemo debitis officiis omnis delectus!</p>
+    </aside>
+   <section>
+    
+   </section>
+</main>
+
+</body>
+</html>

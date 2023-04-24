@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>targeted selectors</title>
+     <style>
+        /* div p {} - div dotr bgaa buh p nariig style hj ugch bn. Harin div > p {} gevel ul li dotr bgaa p bg avhgui. Bcs zuvhn parent element n ul li uchraas so div dotr bgaa 2 p n bg avna*/
+
+        /* direct child */
+        div > p {
+            background: rgb(228, 128, 226);
+        }
+        /* directly after - el iin drah elementiig select hj style hh */
+       div + p {
+        background: #83d3d6;
+        color: white;
+       } 
+       /* by attribute - zuvhn target tai attributeiig select hne*/
+       a[target] {
+        background: pink;
+        color: white;
+       }
+       /* target dotr zaavl _blank gj bichsn attribute iig l select hne */
+       a[target='_blank'] {
+        background: purple;
+        color: white;
+       }
+       /* select by specific value - submit btn maani width herggui uchraas text bln email el iig select hj style hj bn. So btn maani uurchlgdhgui */
+       input[type='text'],
+       input[type='email'] {
+        width: 100%;
+        margin-bottom: 10px;
+       }
+    </style>
+
+   
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+        <ul>
+            <li>item1</li>
+            <li><p>item2</p></li>
+            <li>item3</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet.</p>
+
+    </div>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="#">Page 1</a> <a href="#" target="_self">Page 2</a> <a href="http://google.com" target="_blank">Google</a>
+<br><br>
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="submit" value="Send">
+        <!-- deed taliin submit buttond text hergtei uchraas value avch bn -->
+    </form>
+</body>
+</html>

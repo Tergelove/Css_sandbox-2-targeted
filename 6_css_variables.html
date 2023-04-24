@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+
+    /* body {
+        --light-color: #f4f4f4;
+    } - end ingej tusd hj ugch blno but not suitable, instead below */
+
+    /* :root gd hj ugvl eniigee hna ch duudaad ashiglej boldg. css dr bnga use */
+    :root {
+        /* max-width mun hj ugch boldg. end easy uurchllt shuud hj boldg */
+        --max-width: 1100px;
+        --light-color: #f4f4f4;
+        --primary-color: lightblue;
+        --secondary-color: skyblue;
+        /* box iin urguniig hj ugch bolno */
+        --box-1-width: 1;
+        --box-2-width: 2;
+    }
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+     /*background-color: #f4f4f4;
+    --light-color: #f4f4f4; -end ingej hj ugch blno but not suitable. Instead below */
+    background: var(--light-color);
+}
+header {
+    background-color: var(--primary-color);
+    border-bottom: 5px var(--secondary-color) solid;
+    color: white;
+    text-align: center;
+}
+.container {
+    display: flex;
+    margin: auto;
+    max-width: var(--max-width);
+}
+.box {
+    background-color: var(--primary-color);
+    border-bottom: 5px var(--secondary-color) solid;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+}
+.box-1 { flex: var(--box-1-width);}
+.box-2 { flex: var(--box-2-width);}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS variables</h1>
+    </header>
+    <div class="container">
+        <div class="box box-1">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates rem in sed modi inventore adipisci odio suscipit, distinctio reiciendis!</p>
+        </div>
+        <div class="box box-2">
+            <h3>Title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates rem in sed modi inventore adipisci odio suscipit, distinctio reiciendis!</p>
+        </div>
+    </div>
+</body>
+</html>

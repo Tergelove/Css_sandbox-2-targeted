@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid autofix and minmax</title>
+    <style>
+        /* parent elementdee style hiiy */
+        .grid {
+            display: grid;
+            /* minmax(300px, 1fr)- widthiig umnu n hj ugch bsn bl odo minmax utga avna, mun 2 utga aguulna. Minimum n 300px, maximum n 1fr 
+            auto-fit - automataar fit hne */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); - layoutiig tomruulh bagasgahd mash goy responsive bdlaar dagaj hudulj bn. 300px s doosh width bolnguut 1 l item urtsah tusam olon itemuud bolj bn neg egneend */
+        }
+    .item {
+            padding: 3rem;
+            border: #888 1px solid;
+            background-color: #d6d2d6;
+            font-size: 1.3rem;
+            /* fontiig bold bolgoj bn */
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div> 
+        <div class="item">item 3</div>
+    </div>
+    
+</body>
+</html>
+<!-- gridiig more responsible bolgodg. Hergtei uydee hergtei herggui uydee herggui  nuhtsl bdaldaa taaruulaad ashigladg. Buh zuild neeh ashiglagdhgui bj bolh ch zurgiin gallery ch ymu video gallery ch ymu grid butetstei layout dr mash ih tus boldg -->
+
+<!-- Auto-fit zarimdaa mash ashigtai songolt bolj chaddg zarimda no. Bcs engiin website hiihgd 3 item blaa ghd 1 n sidebar 1n text 1n item ch ymuu blaa ghd delgetsee jijgruulhd sidebar maani doosh uderch orood bval hetsuu. Harin mash olon itemtai grid butetstei webuudd n more suitable. -->
